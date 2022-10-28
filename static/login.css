@@ -1,0 +1,123 @@
+:root {
+  --input-linear: linear-gradient(120deg, #000000, #4e0c0e);
+  --input-button: linear-gradient(120deg, #000000, #4e0c0e);
+  --input-lightgray: #cfcfcf;
+  --input-gray: #707070e0;
+  --input-white: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-image: url("https://www.whats-on-netflix.com/wp-content/uploads/2021/08/netflix-library-photo-scaled.jpg");
+}
+/*mantem a imagem alinhada ao centro e travada, não irá mudar de posição*/
+#image__responsive {
+  display: block;
+  text-align: center;
+}
+
+#logo {
+  width: 75px;
+  cursor: pointer;
+}
+/**Centraliza e aplica estilização ao fundo*/
+.login {
+  height: 100vh;
+  /* background: var(--input-linear); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*cria a caixa container para o login*/
+.login__container {
+  min-height: 400px;
+  width: 300px;
+  background-color: var(--input-white);
+  box-sizing: border-box;
+  padding: 32px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login__title {
+  margin-bottom: 32px;
+  color: #000
+}
+.login__title2{
+  color:  #D81F26;
+}
+.login__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.login__input {
+  height: 48px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 8px;
+  border: unset;
+  outline: none;
+}
+.login__input-border {
+  height: 1px;
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: var(--input-lightgray);
+  transition: 0.3s;
+}
+.login__input-border::after {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 0;
+  background: #4655a7;
+  margin-bottom: linear-gradient(120deg, #4655a7);
+  transition: 0.3s ease-in-out;
+}
+.login__input:focus + .login__input-border::after {
+  width: 100%;
+}
+/*Configurações de estilização do button*/
+.login__submit {
+  height: 48px;
+  width: 100%;
+  padding-left: 8px;
+  outline: none;
+  background: var(--input-button);
+  background-size: 190%;
+  margin-bottom: 32px;
+  color: var(--input-white);
+  font-size: 16px;
+  font-weight: bold;
+  border: unset;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.login__submit:hover {
+  background-position: right;
+}
+.login__reset {
+  font-size: 12px;
+}
+/*==========================HOME==================================*/
+#image__home {
+  display: flex;
+  justify-content: left;
+}
+#logo__home {
+  width: 45px;
+  align-items: center;
+}
+#header {
+  background: var(--input-linear);
+  width: 100%;
+  height: 50%;
+}

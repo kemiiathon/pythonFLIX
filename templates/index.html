@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Pythonflix</title>
+</head>
+<body>
+    <nav id=" nav">
+        <!-- <input type="checkbox" id="check">
+		<label for="check" class="checkbtn">
+			<i class="fas fa-bars"></i> -->
+		</label>
+        <label ><img id="logo" src="static/img/logo.png" alt=""></label>
+        <ul class="menu">
+          <li><a href="{{url_for('inicio')}}">Inicio</a></li>
+          <li><a href="">Filmes</a>
+          <ul>
+            <li><a href="{{url_for('filmes', propriedade = 'populares')}}"> Mais Populares</a></li>
+            <li><a href="{{url_for('filmes', propriedade = 'kids')}}"> Kids</a></li>
+            <li><a href="{{url_for('filmes', propriedade = 'filmes_2010')}}">Filmes 2010</a></li>
+            <li><a href="{{url_for('filmes', propriedade = 'drama')}}"> Drama</a></li>
+          </ul></li>
+          <li><a href="{{url_for('series')}}">Series</a></li>
+        </ul>
+      </nav>
+
+<div class="row">
+  {%for filme in inicio %}
+  <div class="col">
+    <div class="card">
+            <img src="https://image.tmdb.org/t/p/w500{{filme.poster_path}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{filme.title}}</h5>
+            <h5>Rate <span class="note">{{filme.vote_average}}</span></h5>
+            </div>
+        </div>
+    </div>
+{% endfor %}
+</div>
+      {%block conteudo%}
+      {%endblock conteudo%}
+</body>
+</html>

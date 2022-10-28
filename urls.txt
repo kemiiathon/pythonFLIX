@@ -1,0 +1,24 @@
+/discover/movie?sort_by=popularity.desc	
+
+# consulta dos filmes mais populares
+https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=352d670ec2702131d20c69d910d8b598
+
+
+#consulta dos filmes mais populares para crianças
+https://api.themoviedb.org/3/discover/movie?certification_country=US&certification.lte=G&sort_by=popularity.desc&api_key=352d670ec2702131d20c69d910d8b598
+
+#filmes 2010
+https://api.themoviedb.org/3/discover/movie?/discover/movie?primary_release_year=2010&sort_by=vote_average.desc&api_key=352d670ec2702131d20c69d910d8b598
+
+#DRAMA
+https://api.themoviedb.org/3/discover/discover/movie?with_genres=18&sort_by=vote_average.desc&vote_count.gte=10.desc&api_key=352d670ec2702131d20c69d910d8b598
+
+#consulta a imagem
+https://image.tmdb.org/t/p/w500/
+
+#os mais votados
+
+https://api.themoviedb.org/3/discover/tv?with_people=108916,7467&sort_by=popularity.desc&api_key=352d670ec2702131d20c69d910d8b598
+
+
+https://api.themoviedb.org/3/tv/?{tv_id}/season/{season_number}?api_key=<<api_key>>&language=en-US
